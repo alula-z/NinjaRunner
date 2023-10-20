@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class playerSpawner : MonoBehaviour
+public class sceneController : MonoBehaviour
 {
-    [SerializeField] GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         
-        Instantiate(player);
     }
 
     // Update is called once per frame

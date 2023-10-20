@@ -36,10 +36,8 @@ public class Player : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump"))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                anim.SetBool("isJumping", true);
-            }
+            anim.SetBool("isJumping", true);
+            
             
             anim.SetBool("isMoving", false);
             rb.AddForce(new Vector3(rb.velocity.x, jumpForce));
