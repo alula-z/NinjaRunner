@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
+    public GameManager1 gm;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = FindObjectOfType<GameManager1>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,8 @@ public class NextLevel : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("player entered");
-            SceneManager.LoadScene(2, LoadSceneMode.Single);
+            SceneManager.LoadScene(gm.levelNumber, LoadSceneMode.Single);
+            gm.levelNumber++;
         }
     }
 }

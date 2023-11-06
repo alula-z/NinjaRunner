@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         if (gm.pwrAvailable && Input.GetKeyDown("z"))
         {
             transform.position += new Vector3(1, 0, 0) * dashAmount * Time.deltaTime;
-            //gm.pwrAvailable = false;
+            gm.pwrAvailable = false;
         }
 
     }
