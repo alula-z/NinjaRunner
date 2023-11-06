@@ -9,8 +9,8 @@ public class playerSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        Instantiate(player);
+
+        Instantiate(player, new Vector3(transform.position.x, transform.position.y), transform.rotation);
     }
 
     // Update is called once per frame

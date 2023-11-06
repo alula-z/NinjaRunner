@@ -101,9 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  jumpForce: 300
+  jumpForce: 250
   rb: {fileID: 1963290306580199792}
   anim: {fileID: 0}
+  gm: {fileID: 0}
+  dashAmount: 1600
 --- !u!50 &1963290306580199792
 Rigidbody2D:
   serializedVersion: 4

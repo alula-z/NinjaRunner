@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class nextLevelScript : MonoBehaviour
+public class Scroll : MonoBehaviour
 {
+     public GameManager1 gm;
     // Start is called before the first frame update
-    private void Awake()
-    {
-        SceneManager.LoadScene("Level0", LoadSceneMode.Single);
-    }
     void Start()
     {
-        
+        gm = FindObjectOfType<GameManager1>();
     }
 
     // Update is called once per frame
@@ -23,9 +19,13 @@ public class nextLevelScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "player")
+        Debug.Log("collided with scroll");
+        if(collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("level1");
+            gm.pwrAvailable = true;
+            Destroy(gameObject);
         }
     }
+
+    
 }
