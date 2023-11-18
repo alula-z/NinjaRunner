@@ -14,8 +14,7 @@ public class ControllerCam : MonoBehaviour
     {
         GameObject background = GameObject.FindGameObjectWithTag("Background");
 
-        if (background != null)
-        {
+        
             SpriteRenderer backgroundRenderer = background.GetComponent<SpriteRenderer>();
 
             
@@ -24,7 +23,7 @@ public class ControllerCam : MonoBehaviour
 
             minBound = new Vector3(background.transform.position.x - halfWidth, background.transform.position.y - halfHeight, -10f);
             maxBound = new Vector3(background.transform.position.x + halfWidth, background.transform.position.y + halfHeight, -10f);
-        }
+        
         
 
 
