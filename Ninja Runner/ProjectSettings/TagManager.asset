@@ -7,6 +7,12 @@ TagManager:
   - Interactible
   - Scroll
   - GameManager
+  - Bound
+  - Enemy
+  - Top
+  - Kunai
+  - deadZone
+  - Background
   layers:
   - Default
   - TransparentFX

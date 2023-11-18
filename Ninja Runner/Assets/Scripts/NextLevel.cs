@@ -15,15 +15,22 @@ public class NextLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown("r")&& gm.levelNumber == 8)
+        {
+            gm.levelNumber = 1;
+            SceneManager.LoadScene(gm.levelNumber);
+            
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("player entered");
-            SceneManager.LoadScene(gm.levelNumber, LoadSceneMode.Single);
             gm.levelNumber++;
+            SceneManager.LoadScene(gm.levelNumber, LoadSceneMode.Single);
+            
+
         }
     }
 }

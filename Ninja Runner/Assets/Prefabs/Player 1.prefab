@@ -106,6 +106,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   gm: {fileID: 0}
   dashAmount: 1600
+  kunai: {fileID: 3642399708291234648, guid: 354658da962a04e38ad07714408ef1cc, type: 3}
+  currentScene: 0
+  camMain: {fileID: 0}
+  distance: 10
 --- !u!50 &1963290306580199792
 Rigidbody2D:
   serializedVersion: 4
